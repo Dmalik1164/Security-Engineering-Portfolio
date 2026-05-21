@@ -96,5 +96,3 @@ Through this lab I gained practical exposure to:
 # Key Takeaway
 
 This exercise gave me hands-on experience using Elastic as a live SIEM platform and improved my understanding of how SOC analysts investigate, filter, and visualise security events in real-world environments.
-
-This exercise gave me hands-on experience using Elastic as a live SIEM platform and improved my understanding of how SOC analysts investigate, filter, and visualise security events in real-world environments.
