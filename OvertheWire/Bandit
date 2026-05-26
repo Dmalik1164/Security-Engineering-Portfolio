@@ -180,3 +180,15 @@ Base64 Encoding: Recognizing that Base64 is an encoding format used to represent
 Decoding via CLI: Utilizing the built-in Linux utility with the appropriate flag to reverse the encoding and reveal the plaintext password.
 
 Status: Complete ➔ [FLAG_CAPTURED]
+
+### 🟢 Level 11 ➔ Level 12
+* **Objective:** Find the password stored in `data.txt`, where all lowercase and uppercase letters have been rotated by 13 positions (ROT13).
+* **Core Commands:**
+```bash
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+
+ROT13 Cipher: Understanding that a 13-position rotation splits the 26-letter alphabet exactly in half, making the encryption and decryption process identical.
+
+Character Translation (tr): Utilizing the `tr` command to map the standard alphabet to a shifted alphabet string, enabling a 1-to-1 character substitution filter.
+
+Status: Complete ➔ [FLAG_CAPTURED]
