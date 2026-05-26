@@ -98,3 +98,21 @@ When directory trees are too massive for manual exploration (ls and cd), the fin
     Logical Inversion (! -executable): The exclamation point acts as a logical NOT operator, filtering out binary scripts or compiled programs and narrowing the focus to pure data repositories.
 
     Status: Complete ➔ [FLAG_CAPTURED]
+---
+
+### 🟢 Level 6 ➔ Level 7
+* **Objective:** Locate a specific 33-byte file hidden somewhere on the server outside the home directory, owned by user `bandit7` and group `bandit6`.
+* **Core Commands:** ```bash
+  find / -user bandit7 -group bandit6 -size 33c 2>/dev/null
+  cat /var/lib/dpkg/info/bandit7.password  # (Or the exact path your search returned)
+
+When a target file's location is entirely unknown, the search scope must be expanded to the entire operating system architecture.
+
+    Root Directory Targeting (/): Instructs the find engine to scan globally from the absolute top of the system hierarchy down.
+
+    Ownership Filtering (-user & -group): Dynamically isolates files based on their security access control metadata rather than storage pathways.
+
+    Error Redirection (2>/dev/null): Silences the inevitable flood of "Permission Denied" output streams by sending standard errors to the system black hole (/dev/null), leaving only the valid target path visible.
+
+    Status: Complete ➔ [FLAG_CAPTURED]
+
