@@ -64,3 +64,20 @@ In Linux environments, any file or directory prefixed with a dot (.) is treated 
     Appending the -a (all) flag forces the binary to display every entry, exposing the .hidden target file.
 
     Status: Complete ➔ [FLAG_CAPTURED]
+---
+
+### 🟢 Level 4 ➔ Level 5
+* **Objective:** Identify and retrieve the password from the sole human-readable ASCII text file inside the `inhere` directory containing multiple binary files.
+* **Core Commands:** ```bash
+  cd inhere
+  file ./*
+  cat < './-file07'  # (Or whichever specific file index outputted ASCII text)
+When encountering a directory cluttered with multiple files of unknown data structures, executing cat indiscriminately outputs raw binary machine code (data), corrupting terminal visuals.
+
+The Solution:
+
+    The Wildcard (*): Represents an all-inclusive selector matching every file entity in the target folder.
+
+    Bulk Analysis: Combining file ./* commands the utility to sample the headers of all files simultaneously. It categorizes them by architecture, allowing rapid visual isolation of the single ASCII text file (human-readable string characters) from the unreadable binary data blobs.
+
+    Status: Complete ➔ [FLAG_CAPTURED]
