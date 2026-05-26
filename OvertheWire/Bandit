@@ -130,4 +130,19 @@ When a target file contains too many lines of data for manual visual inspection 
     Syntax Processing: The command structure maps to grep [pattern] [target_file]. It suppresses all non-matching rows and outputs only the precise line containing the specified keyword alongside the level password.
 
     Status: Complete ➔ [FLAG_CAPTURED]
+---
+
+### 🟢 Level 8 ➔ Level 9
+* **Objective:** Isolate the single non-repeating line of text from a massive file (`data.txt`) filled with duplicate entries.
+* **Core Commands:** ```bash
+  sort data.txt | uniq -u
+This level introduces the concept of I/O streaming pipelines using the pipe operator (|).
+
+    The Pipe (|): Intercepts the standard output stream of the left-hand command and redirects it as the standard input stream for the right-hand command.
+
+    The Sorting Prerequisite: The uniq binary can only identify duplicate adjacent lines. Therefore, running sort data.txt is required first to group all identical strings together sequentially.
+
+    Unique Isolation (-u): Passing the sorted stream into uniq -u instructs the utility to discard all recurring groups completely, printing only the solitary string that appeared exactly once.
+
+    Status: Complete ➔ [FLAG_CAPTURED]
 
