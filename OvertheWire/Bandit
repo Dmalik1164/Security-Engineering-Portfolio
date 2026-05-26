@@ -34,3 +34,18 @@ Two important technical hurdles were encountered and documented during this phas
     Special Character File Handling (The Dash File): The target file is named -. Running cat - causes the system to hang because Linux interprets a standalone dash as an instruction to read from Standard Input (stdin) rather than a file name. To fix this, the explicit relative path must be provided using cat ./- or cat < - to force the system to treat the dash as a literal filename.
 
     Status: Complete ➔ [FLAG_CAPTURED]
+---
+
+### 🟢 Level 2 ➔ Level 3
+* **Objective:** Retrieve the password for Level 3 from a file containing spaces in its name located in the home directory.
+* **Core Commands:** ```bash
+  cat "spaces in this filename" 
+  # OR using the escape characters: cat spaces\ in\ this\ filename
+
+By default, the shell interprets spaces as delimiters separating distinct arguments or commands. Attempting to execute cat spaces in this filename causes the utility to look for four individual files. This is bypassed using two methods:
+
+    Literal Grouping: Wrapping the full file string inside double quotes (""), forcing the shell to read it as a single entity.
+
+    Character Escaping: Utilizing backslashes (\ ) before every space to instruct the shell to treat the space as a literal part of the string rather than a command break. (Achieved efficiently via terminal tab-completion).
+
+    Status: Complete ➔ [FLAG_CAPTURED]
