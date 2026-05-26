@@ -18,3 +18,19 @@ During the initial setup, two critical SSH mechanics were encountered and resolv
     Explicit User Assignment: Omitting the user profile defaults the SSH handshake to the local system identity (kali). Prepended bandit0@ to target the correct game environment account.
 
     Status: Complete ➔ [FLAG_CAPTURED]
+---
+
+### 🟢 Level 1 ➔ Level 2
+* **Objective:** Log into the `bandit1` account using the password retrieved from Level 0 and locate the next password stored in a file named `-`.
+* **Core Commands:** ```bash
+  exit # Escape remote session back to local Kali host
+  ssh bandit1@bandit.labs.overthewire.org -p 2220
+  cat ./-
+
+Two important technical hurdles were encountered and documented during this phase:
+
+    Localhost Connection Block: Attempting to SSH into bandit1 while still actively authenticated inside the bandit0 shell triggers a server-side resource protection block (Connecting from localhost is blocked). Executing exit to return to the native Kali environment is mandatory before launching a new session.
+
+    Special Character File Handling (The Dash File): The target file is named -. Running cat - causes the system to hang because Linux interprets a standalone dash as an instruction to read from Standard Input (stdin) rather than a file name. To fix this, the explicit relative path must be provided using cat ./- or cat < - to force the system to treat the dash as a literal filename.
+
+    Status: Complete ➔ [FLAG_CAPTURED]
