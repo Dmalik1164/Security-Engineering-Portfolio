@@ -49,3 +49,18 @@ By default, the shell interprets spaces as delimiters separating distinct argume
     Character Escaping: Utilizing backslashes (\ ) before every space to instruct the shell to treat the space as a literal part of the string rather than a command break. (Achieved efficiently via terminal tab-completion).
 
     Status: Complete ➔ [FLAG_CAPTURED]
+---
+
+### 🟢 Level 3 ➔ Level 4
+* **Objective:** Retrieve the password for Level 4 hidden inside a file within the `inhere` directory.
+* **Core Commands:** ```bash
+  cd inhere
+  ls -a
+  cat .hidden
+In Linux environments, any file or directory prefixed with a dot (.) is treated as a hidden file and omitted from standard directory listings.
+
+    Running the native ls command within inhere returns a deceptive empty output.
+
+    Appending the -a (all) flag forces the binary to display every entry, exposing the .hidden target file.
+
+    Status: Complete ➔ [FLAG_CAPTURED]
