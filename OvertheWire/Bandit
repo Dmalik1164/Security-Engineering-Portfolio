@@ -1,1 +1,20 @@
+# ## OverTheWire: Bandit Wargame Log
 
+This log documents my progress through the OverTheWire Bandit wargame. The objective of this challenge is to build foundational Linux command-line, networking, and security concepts.
+
+---
+
+### 🟢 Level 0 ➔ Level 1
+* **Objective:** Establish an SSH connection to the game server and retrieve the password hidden in a file named `readme`.
+* **Core Commands:** ```bash
+  ssh bandit0@bandit.labs.overthewire.org -p 2220
+  ls
+  cat readme
+
+During the initial setup, two critical SSH mechanics were encountered and resolved:
+
+    Port Restriction: Omitting the -p flag defaults the connection to Port 22, which the server drops. Appending -p 2220 is required.
+
+    Explicit User Assignment: Omitting the user profile defaults the SSH handshake to the local system identity (kali). Prepended bandit0@ to target the correct game environment account.
+
+    Status: Complete ➔ [FLAG_CAPTURED]
