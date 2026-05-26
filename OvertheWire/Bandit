@@ -169,5 +169,14 @@ Standard text processing tools like cat or raw grep fail or corrupt terminal vis
 
     Status: Complete ➔ [FLAG_CAPTURED]
 
+### 🟢 Level 10 ➔ Level 11
+* **Objective:** Find the password stored in `data.txt`, which contains base64 encoded data.
+* **Core Commands:**
+```bash
+base64 -d data.txt
 
+Base64 Encoding: Recognizing that Base64 is an encoding format used to represent binary data in an ASCII string format, not a method of encryption.
 
+Decoding via CLI: Utilizing the built-in Linux utility with the appropriate flag to reverse the encoding and reveal the plaintext password.
+
+Status: Complete ➔ [FLAG_CAPTURED]
