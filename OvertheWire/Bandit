@@ -146,3 +146,28 @@ This level introduces the concept of I/O streaming pipelines using the pipe oper
 
     Status: Complete ➔ [FLAG_CAPTURED]
 
+This level introduces the concept of I/O streaming pipelines using the pipe operator (|).
+
+    The Pipe (|): Intercepts the standard output stream of the left-hand command and redirects it as the standard input stream for the right-hand command.
+
+    The Sorting Prerequisite: The uniq binary can only identify duplicate adjacent lines. Therefore, running sort data.txt is required first to group all identical strings together sequentially.
+
+    Unique Isolation (-u): Passing the sorted stream into uniq -u instructs the utility to discard all recurring groups completely, printing only the solitary string that appeared exactly once.
+
+    Status: Complete ➔ [FLAG_CAPTURED]
+---
+
+### 🟢 Level 9 ➔ Level 10
+* **Objective:** Extract a human-readable password preceded by multiple equal signs (`=`) from a largely unreadable binary data file (`data.txt`).
+* **Core Commands:** ```bash
+  strings data.txt | grep "=="
+Standard text processing tools like cat or raw grep fail or corrupt terminal visuals when applied directly to compiled binary files.
+
+    The strings Utility: Scans non-text/binary files to isolate and extract sequential bytes representing human-readable characters, discarding machine code noise.
+
+    Pipeline Stream Control: To filter effectively, data must flow from the general data generator to the specific pattern matcher (strings [file] | grep [pattern]). This ensures grep receives the clean text stream and isolates solely the password line.
+
+    Status: Complete ➔ [FLAG_CAPTURED]
+
+
+
