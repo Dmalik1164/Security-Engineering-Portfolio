@@ -116,3 +116,18 @@ When a target file's location is entirely unknown, the search scope must be expa
 
     Status: Complete ➔ [FLAG_CAPTURED]
 
+---
+
+### 🟢 Level 7 ➔ Level 8
+* **Objective:** Extract the password flag from a massive data dump file (`data.txt`) where the target string is located next to the keyword `millionth`.
+* **Core Commands:** ```bash
+  grep "millionth" data.txt
+
+When a target file contains too many lines of data for manual visual inspection (cat), content-level filtering tools must be utilized.
+
+    The Grep Utility: Scans file content line-by-line, matching strings against a specified pattern.
+
+    Syntax Processing: The command structure maps to grep [pattern] [target_file]. It suppresses all non-matching rows and outputs only the precise line containing the specified keyword alongside the level password.
+
+    Status: Complete ➔ [FLAG_CAPTURED]
+
