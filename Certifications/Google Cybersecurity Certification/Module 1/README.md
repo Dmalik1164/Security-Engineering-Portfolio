@@ -12,12 +12,3 @@
 * Find and Apply for Jobs
 
 ---
-
-# Module 1
-
-## What I'll Learn
-
-* Define security
-* Job responsibilities
-* Core skills of a security analyst
-* Value of security
