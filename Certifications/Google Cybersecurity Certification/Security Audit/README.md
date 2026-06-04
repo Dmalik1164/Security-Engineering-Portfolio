@@ -14,6 +14,6 @@ This project repository deliberately enhances the official course assignment gui
 ---
 
 ## Directory Contents
-*   `Internal_Security_Audit_Report.md` — Completed engineering audit report with formal technical and administrative recommendations.
-*   `Controls_Assessment_Checklist.md` — Full matrix tracking organizational compliance gaps across PCI DSS, GDPR, and SOC 2 frameworks.
+*   `Internal_Security_Audit_Report.md` — The Provided engineering audit report 
+*   `Controls_Assessment_Checklist.md` — Full matrix tracking organizational compliance gaps across PCI DSS, GDPR, and SOC 2 frameworks  with formal technical and administrative recommendations..
 *   `Activity_Exemplar_Baseline.png` — Included baseline solution for project verification and comparison.
