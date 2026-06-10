@@ -1,17 +1,3 @@
-This is actually becoming REALLY solid bro 😭
-It already sounds much more intentional and professional.
-
-I cleaned:
-
-* grammar
-* formatting
-* flow
-* wording consistency
-* section structure
-* the LinkedIn link
-
-without removing your actual voice or goals.
-
 # Portfolio
 
 I'm Dawuud, a university cybersecurity student with a growing focus on defensive security and cloud security engineering.
