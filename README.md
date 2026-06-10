@@ -1,4 +1,4 @@
-# Portfolio
+# Security Engineering Portfolio
 
 I'm Dawuud, a university cybersecurity student with a growing focus on defensive security and cloud security engineering.
 
@@ -38,4 +38,4 @@ A showcase of my virtual home lab environments, documenting:
 
 You can also follow my ongoing learning activity, certifications, and professional development on LinkedIn:
 
-* LinkedIn: [https://uk.linkedin.com/in/dawuud-malik-a74312192](https://uk.linkedin.com/in/dawuud-malik-a74312192)
+* LinkedIn: https://uk.linkedin.com/in/dawuud-malik-a74312192
