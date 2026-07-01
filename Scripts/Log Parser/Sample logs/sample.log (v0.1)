@@ -1,1 +1,4 @@
-
+INFO User login succesful
+WARNING Failed login attempt
+ERROR Invalid password
+INFO Connection established
